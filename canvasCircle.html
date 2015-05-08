@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas width="300" height="300" style="background:radial-gradient(rgba(255,0,0,0),rgba(255,0,0,1))" id="canvas">		
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");	
+		var radius = canvas.height/2;			//确定画布的中心
+		ctx.translate(radius,radius);		//改变参考系原点
+		radius=0.9*radius;		//确定圆的半径
+		var interval = setInterval(drawClock,1000);	
+		
+			
+		//  a function to run other funtions
+		function drawClock(){	
+			drawFace(ctx,radius);		//达到覆盖重绘的效果
+			ctx.translate(0,7);			//调整圆心			
+			drawNumbers(ctx,radius);
+			ctx.translate(0,-7);		//origin the heart of circle
+			drawTimes(ctx,radius);			
+			}
+		// form the outline of a clock
+		function drawFace(ctx,radius){
+			var grad;
+			ctx.beginPath();
+			ctx.arc(0,0,radius,0,2*Math.PI);
+			ctx.fillStyle="white";
+			ctx.fill();
+			grad = ctx.createRadialGradient(0,0,radius*0.95,0,0,radius*1.05);
+			grad.addColorStop(0,'rgba(150,0,0,0.7)');
+			grad.addColorStop(0.5,'white');
+			grad.addColorStop(1,'rgba(150,0,0,0.7)');
+			ctx.strokeStyle=grad;
+			ctx.lineWidth = radius*0.1;
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(0,0,radius*0.1,0,2*Math.PI);
+			ctx.fillStyle="rgba(255,0,0,0.7)";
+			ctx.fill();
+		}
+		//to write the clock num
+		function drawNumbers(ctx,radius){
+			var ang;
+			var num;
+			ctx.font=radius*0.15+"px arial";
+			ctx.textBaseLine = "middle";
+			ctx.textAlign="center";			
+			for(num=1;num<13;num++){
+				ang = num*Math.PI/6;
+				ctx.rotate(ang);
+				ctx.translate(0,-0.85*radius);
+				ctx.rotate(-ang);
+				ctx.fillStyle="red";
+				ctx.fillText(num.toString(),0,0);
+				ctx.rotate(ang);
+				ctx.translate(0,0.85*radius);
+				ctx.rotate(-ang);
+			}
+		}
+		// to define the time which hands rely on to draw.
+		function drawTimes(ctx,radius){
+			var date = new Date();
+			var hour = date.getHours();
+			var min  = date.getMinutes();
+			var sec  = date.getSeconds();
+			hour = hour%12;
+			hour = (hour*Math.PI/6)+(min*Math.PI/(60*6))+(sec*Math.PI/(60*60*6));
+			drawHands(ctx,hour,radius*0.5,radius*0.07)
+			min  = (min*Math.PI/30)+(sec*Math.PI/(60*30));
+			drawHands(ctx,min,radius*0.8,radius*0.07);
+			sec  = (sec*Math.PI/30);
+			drawHands(ctx,sec,radius*0.9,radius*0.02);
+		}
+		// make the clock hands include hour , minute, second hands
+		function drawHands(ctx,ang,length,width){
+			ctx.beginPath();
+			ctx.lineWidth = width;
+			ctx.lineCap = "round";
+			ctx.moveTo(0,0);
+			ctx.rotate(ang);
+			ctx.lineTo(0,-length);
+			ctx.strokeStyle="rgba(255,0,0,0,7)";
+			ctx.stroke();
+			ctx.rotate(-ang);
+		}
+	</script>
+</body>
+
+</html>
