@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	.spirit {              /* 方块的class名称*/
+         position: absolute;
+         width: 50px;
+         height: 50px;
+         background-color: red;
+}
+</style>
+<body style="height: 100%;margin:0;padding:0">
+ 
+<div id="canvas"  style="position: relative;width:100%;height: 100%;"></div>
+ 
+</body>
+<script type="text/javascript">
+	// define global variable
+var canvas = document.getElementById("canvas");
+var spirit, startX, startY;
+    // touch start listener
+ 
+function touchStart(event) {
+         event.preventDefault();
+         if (spirit ||! event.touches.length) return;
+         var touch = event.touches[0];
+         startX = touch.pageX;
+         startY = touch.pageY;
+         spirit = document.createElement("div");
+		 spirit.className="spirit";
+         spirit.style.left = startX;
+         spirit.style.top = startY;
+         canvas.appendChild(spirit);
+}
+ 
+// add touch start listener
+canvas.addEventListener("touchstart", touchStart, false);
+</script>
+</html>

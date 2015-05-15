@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{			/*使用font添加图片注释*/
+	font-family:'twitter';	
+	src: url('../font/rosetta-icons-Regular.woff') format('woff');
+}
+body{
+		line-height: 12px;
+		background-color: #1C6399;
+		height:100%;
+		margin: 0px;		
+	}
+	ul{
+		list-style-type: none;
+		padding: 0px;
+	}
+	.bg{
+		width: 100%;
+		height: 200%;
+		position: fixed;
+	}
+	.bg img{
+		  min-width: 50%;
+		  min-height: 50%;
+		  width: 100%;
+	}
+	.head{
+		  width: 100%;
+		  min-width: 50%;
+		  height: 53px;
+		  position: fixed;
+		  z-index: 100;	
+		  background-color: #FFF;
+		  box-shadow: 0px 0px 3px 1px black;
+	}
+	.setWidth{
+		width:892px;
+		margin:0 auto;
+		height:100%;
+	}
+	.bird{
+		    width: 27px;
+	  height: 29px;
+	  position: absolute;
+	  font-size: 25px;
+	  color: #55acee;
+	  margin-top: -10px;
+	  top: 50%;
+	}
+	.bird::before{
+		content: "\f179";
+  display: block;
+  font-family: "twitter";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+	}
+	.language{
+		   position: relative;
+		  float: right;		  
+		  font-size: 15px;
+		  top: 50%;
+		  margin-top: -7.5px;
+	}
+	.language_Iink{
+		text-decoration: underline;
+		cursor: pointer;		
+		color:blue;
+	}
+	.language_Iink_change{
+		text-decoration: none;
+		cursor:pointer;
+		color:blue;
+	}
+	.arrow{
+		  float: right;
+	  cursor: pointer;
+	  width: 0;
+	  height: 0;
+	  border-left: 5px solid transparent;
+	  border-right: 5px solid transparent;
+	  border-top: 5px solid black;
+	  margin: 5px;
+	}
+	.language_content{
+		  position: absolute;
+		  display:none;
+		  top: 16px;
+		  left: -49px;
+		  width: 251px;
+		  background: url("../images/up_arrow.jpg") 0px 0px no-repeat;
+		  background-color: rgba(255, 255, 255, 0.95);
+		  box-shadow: 0px 56px 47px rgba(0,0,0,0.25);
+  		  border-radius: 4px;
+			}
+	.language_content ul li{
+		width:50%;
+		float:left;
+		padding: 10px 0px;
+
+	}
+	.language_content a{
+		text-decoration: none;
+		padding: 3px 10px;
+	}
+	.a_color{
+		color: #FFF;
+		background-color: #2b7bb9;		
+	}
+	.li_bg_color{
+		background-color: #2b7bb9;
+	}
+	.content{
+		  width: 890px;
+		  background: #FFF;
+		  border: 1px solid #FFF;
+		  border-radius: 10px;
+		  position: absolute;
+		  top: 31%;
+		  left: 17%;
+		  padding:95px 0px;
+		}
+		.register_smallPage{
+			padding: 15px;
+		}
+		.account_part,.password_part{
+			width:240px;
+			height:50px;
+			line-height: 20px;
+		}
+		.account_part input,.password_part input{
+			padding: 0px;
+		    width: 214px;
+		    height: 20px;
+		    border:1px solid #E1E8ED;
+		    padding: 3px;
+		    font-size:20px;
+		    box-shadow: 0px 1px 3px #E1E8ED inset;
+		}
+		.account_part span,.password_part span{
+			font-size:13px;
+			color:#292F33;
+		}
+		.bottom_bts{
+			width:240px;
+			height:30px;
+		}
+		.bottom_bts span{
+			color:#989898;
+			cursor:pointer;
+		}
+		.bottom_bts input{
+			cursor: pointer;
+		}
+		.login_bt{
+		  padding: 6px 11px;
+		  background-color: rgb(247, 249, 251);
+		  border: 1px solid rgb(225, 232, 237);
+		  border-radius: 6px;
+		  font-size: 16px;
+		  font-weight: bold;
+		  color: rgb(102, 117, 127);		  
+		  margin-right: 21px;
+		}
+		.login_bt:hover{
+			color:rgb(76, 87, 94);
+			background-color: rgb(239, 245, 250);
+		}
+		.register_smallPage a{
+		  margin-top: 3px;
+		  display: block;
+		  color: #2b7bb9;
+		  line-height: 15px;
+		  font-size: 13px;
+		}
+		.register_smallPage a:hover{
+			text-decoration: underline;
+		}
+		.content_log_up{
+			width:620px;
+			margin: 0px 135px;
+		}
+		.content_log_up h1{
+			font-size:48px;
+			color:#292f33;
+			margin-bottom: 69px;
+		}
+		.content_log_up input{
+			  width: 392px;
+			  height: 20px;
+			  box-shadow: 0px 0px 1px #E1E8EF;
+			  outline: none;
+			  border: 1px solid #E1E8EF;
+			  padding: 4px;
+			  font-size: 14px;
+			  border-radius: 4px;
+		}
+		.content_log_up input:focus{
+			  border:1px solid #28A5F4;
+		}
+		.content_log_up div{
+			margin:28px 0px;
+			position: relative;
+		}
+		#indication{
+			position: absolute;	
+		}
+		#indication span{
+		  width: 50px;
+		  height: 8px;
+		  position: absolute;
+		  z-index: 2;
+		  left: 342px;
+		  top: -47px;
+		  border-radius: 4px;
+		  background-color: #e1e8ed;
+		}
+		#suggestion{
+			width:392px;
+			height:52px;
+		}
+		#suggestion span{
+			color:#A69B9B;
+			font-size:15px;
+			line-height: 18px;
+		}
+		#suggestion a{
+		  color: rgb(102, 123, 191);
+		  text-decoration: none;
+		  padding: 0px 3px;
+		  line-height: 24px;
+		}
+		#suggestion a:hover{
+			text-decoration: underline;
+		}
+		.prompt_option input{
+			width:auto;
+			padding:4px;
+			vertical-align: middle;
+		}
+		.prompt_option span{
+			color:#A69B9B;
+		}
+		.sign_up input{
+			width:392px;
+			height:36px;
+			background-color: #55acee;
+			border-radius: 4px;
+			font-size:15px;
+			color:#FFF;
+			font-weight: 700;
+			cursor: pointer;
+		}
+		#definition{
+		  line-height: 15px;
+		  font-size: 14px;
+		  color: #8899a6;
+		}
+		#definition span{
+			color: #2b7bb9;
+			cursor: pointer;
+		}
+		#definition span:hover{
+			text-decoration: underline;
+		}
+		.correct{
+			background: url("../images/click.png");
+		    position: absolute;
+		    padding: 5px;
+		    margin-left: 5px;
+		    top: 9px;
+		}
+		.error{
+			background:url("../images/error.png") no-repeat;
+			position: absolute;
+		    margin-left: 5px;
+		    top: 9px;
+		    font-size:14px;
+		    padding-left:14px;
+		    color: rgb(204, 51, 51);
+		}
+		.showLength{
+	     height: 100%;
+		 position: absolute;
+		 z-index: 2;
+		 border-radius: 3px;
+		 background-color: #6ec02a;
+		}error
+		
+		

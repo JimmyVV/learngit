@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+	<title>twitterHomePage</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/homePage.css">
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+<div class="modal">
+	<div class="modal_window">
+		<div class="window_head">
+			<h3>撰写新推文</h3>
+			<i class="close_icon icon" title="关闭"></i>
+		</div>
+		<div class="window_content">
+			<form>
+				<textarea class="window_content_newText" id="window_content_newText" maxlength="140"></textarea>
+				<div class="window_content_bts">
+					<button class="window_content_bts_addPic">
+						<i class="camera icon"></i>
+						<span>添加照片</span>
+					</button>
+					<button class="window_content_bts_prohibitLocation" disabled="disabled">
+						<i class="location icon"></i>
+						<span>禁止位置</span>
+					</button>
+					<div class="window_content_bts_sendBt">
+						<span class="countNum" id="countNum">140</span>
+						<button class="sendBt" id="sendBt" disabled="disabled">
+							<i class="icon sendBt_icon"></i>
+							<span>发推</span>
+						</button>						
+					</div>
+				</div>				
+			</form>
+		</div>
+	</div>
+</div>
+	<div class="head">
+		<div class="setWidth">	
+			<div class="head_nav">
+				<ul>
+					<li class="1">
+						<i class="nav_icon--homepage nav_icon--form icon"></i>
+						<span class="nav_font--homepage nav_font--form">主页</span>
+					</li>
+					<li class="2">
+						<i class="nav_icon--message nav_icon--form icon"></i>
+						<span class="nav_font--message nav_font--form icon">通知</span>
+					</li>
+					<li class="3">
+						<i class="nav_icon--email nav_icon--form icon"></i>
+						<span class="nav_font--email nav_font--form">私信</span>
+					</li>				
+				</ul>
+			</div>
+				<div class="head_bird icon">				
+				</div>
+				<div class="head_rightAction">
+					<div class="head_rightAction_search"> 
+						<input type="text" class="head_rightAction_searchBar icon" placeholder="搜索 Twitter"/>	
+						<div class="search_icon icon"></div>
+					</div>
+					<div class="head_rightAction_rightTwo">
+						<div class="head_rightAction_privacy">
+							<img class="head_rightAction_Btprivacy" src="images/self_message.png"/>
+							<div class="prompt privacy">
+								<i class="triangle privacy_triangle"></i>
+								<span>个人资料与账号</span>
+							</div>
+							 <div class="dropmenu">
+	                            <div id="drop-triangle">
+	                                <span class="caret"></span>
+	                                <span class="caret-inner"></span>
+	                            </div>
+								 <ul>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">
+                                        <b>Jimmy_VV</b>
+                                        <small>查看个人资料</small>
+                                    </a>
+                                </li>
+                                <li class="straight-line">
+                                </li>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">
+                                        列表
+                                    </a>
+                                </li>
+                                <li class="straight-line">
+                                </li>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">
+                                        帮助
+                                    </a>
+                                </li>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">
+                                        键盘快捷键
+                                    </a>
+                                </li>
+                                <li class="straight-line">
+                                </li>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">
+                                        设置
+                                    </a>
+                                </li>
+                                <li class="acinfo">
+                                    <a href="javascript:void(0)">Log out</a>
+                                </li>
+                            </ul>
+                            </div>
+						</div>
+					</div>	
+						<button class="head_rightAction_sendText">
+							<i class="icon textLogo"></i>
+							<span class="text">发推</span>							
+						</button>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="images/windpage_self.png" id="bg"/>
+	<div class="content">
+		<div class="content_leftPart">
+			<div class="content_leftPart_selfInfo">
+				<div class="selfInfo_upPart"></div>
+				<div class="addPortrait">
+					<i class="portrait_icon icon"></i>
+					<div class="prompt portrait">						
+						<span>添加头像</span>
+						<i class="triangle portrait_triangle"></i>
+					</div>					
+				</div>
+				<div class="selfInfo_downPart">
+					<div class="selfInfo_downPart_account">
+						<a href="#">Jimmy_VV</a>
+						<a href="#">@Jimmy_VV</a>
+					</div>
+					<ul class="selfInfo_content">
+						<li>
+							<span>推文</span>
+							<strong>0</strong>
+						</li>
+						<li>
+							<span>正在关注</span>
+							<strong>4</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="content_leftPart_moreFn">
+				<li>
+					<h1>从Twitter获得更多</h1>
+				</li>
+				<li>注册<i class="logUp moreIcons icon"></i></li>
+				<li>关注 5 个账号<i class="plus moreIcons icon"></i></li>
+				<li>完善你的个人资料<i class="individualInfo moreIcons icon"></i></li>
+				<li>查找你的好友<i class="findFriends moreIcons icon"></i></li>
+			</ul>
+			<ul class="content_leftPart_trend">
+				<li><h3>趋势 · <a href='#'>更改</a></h3></li>
+				<li>
+                        <a href="">#EqualPayDay</a>
+                    </li>
+                    <li>
+                        <a href="">#BringBackOurGirls</a>
+                    </li>
+                    <li>
+                        <a href="">Percy Sledge</a>
+                    </li>
+                    <li>
+                        <a href="">Rita Wilson</a>
+                    </li>
+                    <li>
+                        <a href="">#dennisquaid</a>
+                    </li>
+                    <li>
+                        <a href="">#BombayVelvet</a>
+                    </li>
+                    <li>
+                        <a href="">Family Feud</a>
+                    </li>
+                    <li>
+                        <a href="">#RRvMI</a>
+                    </li>
+                    <li>
+                        <a href="">Staten Island</a>
+                    </li>
+                    <li>
+                        <a href="">Angela Williamson</a>
+                    </li>
+			</ul>
+		</div>
+		<div class="content_middle">
+			<ul class="content_middle_content">
+				<div class="content_middle_content_sendTwitter">
+					<img src="images/self_message.png" class="sendTwitter_logo">
+					<form>
+					<div id="sendTwitter_instant">
+						<input type="text" value="有什么新鲜事？" id="sendTwitter_text">
+						<i class="sendTwitter_camera icon"></i>
+						<div class="prompt ">
+						</div>
+					</div>
+					<div id="sentTwitter_click">
+						<div class="sendTwitter_input">							
+							<div class="sendTwitter_input_content">
+								<form>
+									<textarea class="sendTwitter_input_newText window_content_newText" id="sendTwitter_input_newText" maxlength="140" autofocus></textarea>
+									<div class="window_content_bts">
+										<button class="window_content_bts_addPic">
+											<i class="camera icon"></i>
+											<span>添加照片</span>
+										</button>
+										<button class="window_content_bts_prohibitLocation" disabled="disabled">
+											<i class="location icon"></i>
+											<span>禁止位置</span>
+										</button>
+										<div class="window_content_bts_sendBt">
+											<span class="countNum" id="countNum_2">140</span>
+											<button class="sendBt" id="sendBt_2" disabled="disabled">
+												<i class="icon sendBt_icon"></i>
+												<span>发推</span>
+											</button>						
+										</div>
+									</div>				
+								</form>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<li>
+					<img src="images/portrait_1.jpg" class="portrait_user">
+					<div class="newMessage">
+						<ul>
+							<li><a href="#"><strong>New York Magazine</strong><span>@NYMag</span><small> · 2hours</small></a><span class="translation icon"><span class="translation_text">查看翻译</span></span></li>
+							<li class="description">Is neighborhood-based public education liberal?<a href="#">nym.ag/1J17hnU</a></li>
+							<li>
+								<img src="images/pedler.jpg" class="newMessage_pic">
+							</li>
+							<li class="newMessage_Bts">
+								<a href="#">
+									<i class="icon revert icon_bt"></i>
+									<div class="prompt newMessage_prompt">										
+										<span>回复</span>
+										<i class="triangle newMessage_prompt_triangle"></i>
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon foward icon_bt"><span>1</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>转推</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon collect icon_bt"><span>12</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>收藏</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon moreBts icon_bt"></i>
+									<div class="prompt newMessage_prompt">
+										<span>更多</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>	
+							</li>							
+						</ul>
+					</div>
+				</li>
+				<li>
+					<img src="images/portrait_1.jpg" class="portrait_user">
+					<div class="newMessage">
+						<ul>
+							<li><a href="#"><strong>New York Magazine</strong><span>@NYMag</span><small> · 2hours</small></a><span class="translation icon"><span class="translation_text">查看翻译</span></span></li>
+							<li class="description">Is neighborhood-based public education liberal?<a href="#">nym.ag/1J17hnU</a></li>
+							<li>
+								<img src="images/pedler.jpg" class="newMessage_pic">
+							</li>
+							<li class="newMessage_Bts">
+								<a href="#">
+									<i class="icon revert icon_bt"></i>
+									<div class="prompt newMessage_prompt">										
+										<span>回复</span>
+										<i class="triangle newMessage_prompt_triangle"></i>
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon foward icon_bt"><span>1</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>转推</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon collect icon_bt"><span>12</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>收藏</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon moreBts icon_bt"></i>
+									<div class="prompt newMessage_prompt">
+										<span>更多</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>	
+							</li>							
+						</ul>
+					</div>
+				</li>
+				<li>
+					<img src="images/portrait_1.jpg" class="portrait_user">
+					<div class="newMessage">
+						<ul>
+							<li><a href="#"><strong>New York Magazine</strong><span>@NYMag</span><small> · 2hours</small></a><span class="translation icon"><span class="translation_text">查看翻译</span></span></li>
+							<li class="description">Is neighborhood-based public education liberal?<a href="#">nym.ag/1J17hnU</a></li>
+							<li>
+								<img src="images/pedler.jpg" class="newMessage_pic">
+							</li>
+							<li class="newMessage_Bts">
+								<a href="#">
+									<i class="icon revert icon_bt"></i>
+									<div class="prompt newMessage_prompt">										
+										<span>回复</span>
+										<i class="triangle newMessage_prompt_triangle"></i>
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon foward icon_bt"><span>1</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>转推</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon collect icon_bt"><span>12</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>收藏</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon moreBts icon_bt"></i>
+									<div class="prompt newMessage_prompt">
+										<span>更多</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>	
+							</li>							
+						</ul>
+					</div>
+				</li>
+				<li>
+					<img src="images/portrait_1.jpg" class="portrait_user">
+					<div class="newMessage">
+						<ul>
+							<li><a href="#"><strong>New York Magazine</strong><span>@NYMag</span><small> · 2hours</small></a><span class="translation icon"><span class="translation_text">查看翻译</span></span></li>
+							<li class="description">Is neighborhood-based public education liberal?<a href="#">nym.ag/1J17hnU</a></li>
+							<li>
+								<img src="images/pedler.jpg" class="newMessage_pic">
+							</li>
+							<li class="newMessage_Bts">
+								<a href="#">
+									<i class="icon revert icon_bt"></i>
+									<div class="prompt newMessage_prompt">										
+										<span>回复</span>
+										<i class="triangle newMessage_prompt_triangle"></i>
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon foward icon_bt"><span>1</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>转推</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon collect icon_bt"><span>12</span></i>
+									<div class="prompt newMessage_prompt">
+										<span>收藏</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>
+								<a href="#">
+									<i class="icon moreBts icon_bt"></i>
+									<div class="prompt newMessage_prompt">
+										<span>更多</span>
+										<i class="triangle newMessage_prompt_triangle"></i>								
+									</div>
+								</a>	
+							</li>							
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="content_right">
+			<ul class="rt-wrap">
+				 <li>
+                        <span>© 2015 Twitter</span>
+                    </li>
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li>
+                        <a href="#">条款</a>
+                    </li>
+                    <li>
+                        <a href="#">隐私</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="#">广告信息</a>
+                    </li>
+                    <li>
+                        <a href="#">商标</a>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">状态</a>
+                    </li>
+                    <li>
+                        <a href="#">应用</a>
+                    </li>
+                    <li>
+                        <a href="#">工作机会</a>
+                    </li>
+                    <li>
+                        <a href="#">广告</a>
+                    </li>
+                    <li>
+                        <a href="#">企业</a>
+                    </li>
+                    <li>
+                        <a href="#">媒体</a>
+                    </li>
+                    <li>
+                        <a href="#">开发者</a>
+                    </li>
+                    <li>
+                        <a href="#">板球</a>
+                    </li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/homePage.js"></script>
+</body>
+</html>

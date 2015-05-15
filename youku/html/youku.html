@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.simplemodal.js"></script>
+		<script type="text/javascript" src="../js/iScroll.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/youku.css">		
+		<title>优酷网_新人作业</title>
+		
+	</head>
+	<body>
+		<div class="header">
+			<div class="header_nav">
+				<div class="header_nav_logo">
+				</div>
+				<div class="header_nav_channel" id="header_nav_channel">
+					<span class="header_nav_channel--img header_nav_Icons"></span>
+					<span>频道</span>
+				</div>
+				<div class="header_nav--right2">
+					<div class="header-sidebar--right2--register" id="header-sidebar--right2--register">
+						<span class="header_nav_register--img header_nav_Icons"></span>
+						<span>登录</span>
+					</div>
+					<div class="header_nav--right2--record" id="header_nav--right2--record">
+						<span class="header_nav_record--img header_nav_Icons"></span>
+						<span>记录</span>
+					</div>
+				</div>
+				<div class="header_nav_search" id="header_nav_search">
+					<span class="header_nav_search--img header_nav_Icons"></span>
+					<span>搜索</span>
+				</div>
+				
+			</div>
+			<!--Channels-->
+			<div class="header_channel--names">
+				<ul>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">电视剧</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+					<li><a href="#">优酷首页</a></li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">充值</a>
+					</li>
+					<li>
+						<a href="#">会员</a>
+					</li>
+					<li>
+						<a href="#">拍客</a>
+					</li>
+					<li>
+						<a href="#">优酷移动</a>
+					</li>
+				</ul>
+			</div>
+			<!--records-->
+			<div class="header_record_Columns">
+				<div class="record_Columns--body">
+					<span class="update_record">您最近没有观看过影视节目</span>
+					<button class="record_loggin--bt">登&nbsp;&nbsp;录</button>
+					<span class="update_record">同步电脑观看记录</span>
+				</div>
+			</div>
+			<!--search_frame-->
+			<div class="header_searchColumn">
+				<input type="text" class="header_searchColumn--bar">
+				<button class="header_searchColumn--button">
+				<span></span>搜库
+				</button>
+			</div>
+		</div>
+		<!--the navigator columns-->
+		<div class="nav">
+			<div class="nav--border">
+				<div class="nav_list_bottom" id="nav_list_bottom">
+					<ul class="nav_list" id="nav_list">
+						<li class="current"><a href="#">首页</a></li>
+						<li><a href="#">电视剧</a></li>
+						<li><a href="#">电影</a></li>
+						<li><a href="#">综艺</a></li>
+						<li><a href="#">音乐</a></li>
+						<li><a href="#">动漫</a></li>
+						<li><a href="#">全部</a></li>
+						<li><a href="#">咨询</a></li>
+						<li><a href="#">娱乐</a></li>
+						<li><a href="#">原创</a></li>
+						<li><a href="#">纪录片</a></li>
+						<li><a href="#">财经</a></li>
+						<li><a href="#">体育</a></li>
+						<li><a href="#">汽车</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--container-->
+		<div class="container">
+			<div class="container_reommmendItems">
+				<div class="container_hitVideo">
+					<div class="container_hitVideo_img video_img--regSetting">
+					</div>
+					<div class="container_hitVideo_bg">
+						<img src="../images/bg_img.png"/>
+					</div>
+					<div class="hitVideo_bgshadow"></div>
+					<div class="hitVideo--font">
+						<a href="#">窦唯发福地铁打瞌睡&nbsp;中国摇滚缘何没...</a>
+						<div class="rating_comment--content">
+							<i class="play_logo smallIcons--location"></i>
+							<span>78.3万</span>
+							<i class="comment_logo smallIcons--location"></i>
+							<span>129</span>
+							<span class="desc_float_right">12:30</span>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="myRecomment">
+				<div class="title_wrap">
+					<div class="title">
+						<div class="title_font">
+							<a href="#">为他推荐</a>
+						</div>
+						<div class="more">
+							<span>更多</span><i class="more--logo smallIcons--location"></i>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="myRecomment">
+				<div class="title_wrap">
+					<div class="title">
+						<div class="title_font">
+							<a href="#">老坛酸菜</a>
+						</div>
+						<div class="more">
+							<span>更多</span><i class="more--logo smallIcons--location"></i>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="myRecomment">
+				<div class="title_wrap">
+					<div class="title">
+						<div class="title_font">
+							<a href="#">统一</a>
+						</div>
+						<div class="more">
+							<span>更多</span><i class="more--logo smallIcons--location"></i>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="myRecomment">
+				<div class="title_wrap">
+					<div class="title">
+						<div class="title_font">
+							<a href="#">康师傅</a>
+						</div>
+						<div class="more">
+							<span>更多</span><i class="more--logo smallIcons--location"></i>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="myRecomment">
+				<div class="title_wrap">
+					<div class="title">
+						<div class="title_font">
+							<a href="#">小浣熊</a>
+						</div>
+						<div class="more">
+							<span>更多</span><i class="more--logo smallIcons--location"></i>
+						</div>
+					</div>
+				</div>
+				<div class="move--left">
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					<div class="video_item">
+						<div class="video_item_p">
+							<div class="abs_width">
+								<div class="container_hitVideo_bg">
+									<img src="../images/video_defaultpic2.png"/>
+								</div>
+								<div class="video_item_img1 video_img--regSetting">
+								</div>
+								<div class="video_item_bg"></div>
+								
+								<div class="video_item_update">
+									<span class="update_logo">更新至</span>
+								</div>
+							</div>
+							<div class="desc_items">
+								<a href="#"><特警力量>魔鬼训练任务...</a>
+								<i></i>
+								<i class="play_logo smallIcons--location"></i>
+								<span>78.3万</span>
+								<i class="comment_logo smallIcons--location"></i>
+								<span>129</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<span>Copyright©2015 优酷 youku.com 版权所有</span>
+			<a href="#">反盗版盗链声明</a><a href="#">京ICP证060288号</a><i class="ico-icp"></i>
+		</div>
+		<div class="sidebar">
+			<div class="gotoTop sidebar_bg goto_hide">
+				<i class="sibar_logo goto_logo"></i>
+			</div>
+			<div class="user sidebar_bg">
+				<i class="sibar_logo user_logo"></i>
+			</div>
+			<div class="feedback sidebar_bg">
+				<i class="sibar_logo feedback_logo"></i>
+				<span>反馈</span>
+			</div>
+		</div>
+		<!--模态窗口-->
+		<div class="modal_register">
+			<div class="modal_register_header">请登录
+				<div class="modalClose">
+					<div class="simplemodal-close_img" id="simplemodal-close_img"></div>
+				</div>
+			</div>
+			<div class="modal_register_content">
+				<div class="modal_register_divs">
+					<div class="modal_register_account--logo">
+						<div class="modal_register_account--img modal_register_account--img_size"></div>
+					</div>
+					<input type="text" class="modal_frame_size" placeholder="邮箱/手机"> <a href="#">注册优酷</a>
+				</div>
+				<div >
+					<div class="modal_register_account--logo">
+						<div class="modal_register_password--img modal_register_account--img_size"></div>
+					</div>
+					<input type="password" class="modal_frame_size" placeholder="密码">	<a href="#">找回密码</a>
+				</div>
+				<div>
+					<button class="modal_frame_size modal_register_login">登录	</button>
+				</div>
+				<div>
+					<span class="cooperation">使用合作网站账号登陆</span>
+					<ul>
+						<li class="qq--cooperation cooperation--size"></li>
+						<li class="webo--cooperation cooperation--size"></li>
+						<li class="aliba--cooperation cooperation--size"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/youku.js"></script>
+	</body>
+</html>
