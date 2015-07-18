@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript" src="scripts/jQuery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.simplemodal-1.4.4.js"></script>
+    <script type="text/javascript" src="scripts/tuhao.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/tuhao.css">
+    <title>土豪网</title>
+</head>
+
+<body>
+    <div class="page" role="container">
+        <!-- 头部栏 -->
+        <header>
+            <h2>土豪网</h2>
+            <ul>
+                <li role="search">
+                    <div class="input-group search">
+                        <input type="search" class="form-control" placeholder="想要什么关键词搜起来~">
+                        <span class="input-group-addon search images"></span>
+                    </div>
+                </li>
+                <li role="login"><i class="login-btn images"></i><a>登录</a></li>
+                <li role="register"><i class="register-btn images"></i><a>注册</a></li>
+            </ul>
+            <div class="title" role="website"><a>www.tuhao.com</a></div>
+            <!-- 首页导航 -->
+            <nav>
+                <div class="homepage"><a class="active" data-toggle="navigation">首页</a></div>
+                <span>|</span>
+                <div class="chart"><a data-toggle="navigation">土豪榜</a></div>
+            </nav>
+            <!-- 我的送送和我的发布 -->
+            <div class="detail" role="navigation">
+                <div class="release"><a>我要发布</a></div>
+                <span>|</span>
+                <div class="sending">
+                    <a>我的送送</a><i class="sending-btn images"></i>
+                </div>
+            </div>
+            <div role="table">
+                <ul class="sending-table" id="sending-table" data-toggle="mysending">
+                    <li>出送中</li>
+                    <li>新留言</li>
+                </ul>
+            </div>
+        </header>
+        <!-- 头部栏 -->
+        <!-- 将下面的div覆盖掉 -->
+        <article>
+            <!-- 月榜栏 -->
+            <div class="tuhaocharts">
+                <span>月榜:</span>
+                <div class="charts-containter">
+	                <ul id="charts">
+	                    <li><i class="images tuhao">1</i><span>AA</span></li>
+	                    <li><i class="images tuhao">2</i><span>BB</span></li>
+	                    <li><i class="images tuhao">3</i><span>CC</span></li>
+	                    <li><i class="images tuhao">4</i><span>DD</span></li>
+	                    <li><i class="images tuhao">5</i><span>EE</span></li>    
+	                    <li><i class="images tuhao">6</i><span>DD</span></li>
+	                    <li><i class="images tuhao">7</i><span>EE</span></li>         
+	                    <li><i class="images tuhao">8</i><span>DD</span></li>
+	                    <li><i class="images tuhao">9</i><span>EE</span></li>                        
+	                </ul>
+                </div>
+                <span>
+				<i></i>
+				<i></i>
+				<i></i>
+				</span>
+            </div>
+            <div class="decoration">
+                <span></span>
+                <span></span>
+            </div>
+            <!-- 月榜栏 -->
+            <!-- 推荐内容 -->
+            <section class="recommend">
+                <ul>
+                    <li>
+                        <div role="recommend-content">
+                            <h3>推荐内容</h3>
+                            <p>RECOMMEND</p>
+                            <span><img src="images/weave.png"></span>
+                            <a>转让注意事项</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li>
+                        <div class="commodity-modal"></div><img src="images/bicycle.jpg" alt="商品栏"></li>
+                    <li><a title="更多">ABOUT MORE</a><span><i class="images more-btn"></i></span></li>
+                </ul>
+            </section>
+            <!-- 推荐内容 -->
+            <!-- 学习用品以及其他 -->
+            <section class="commodity" id="commodity">
+                <div class="commodity-title">
+                    <p><i></i><span id="commodity-name">学习用品:</span><i></i></p>
+                    <ul>
+                        <li>ALL</li>
+                        <li class="options-active">时间</li>
+                        <span>|</span>
+                        <li>积分</li>
+                        <span>|</span>
+                        <li>热度</li>
+                    </ul>
+                </div>
+                <section class="commodity-lists">
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>牛津双解词典</h3>
+                                <p>OXFORD ENGLISH-CHINESE DICTIONARY</p>
+                                <span>机械学院</span>
+                                <span>苗苗</span>
+                            </div>
+                            <div>
+                                <img src="images/book.jpg" title="商品">
+                            </div>
+                            <span>ABOUT MORE<i class="images left-arrow"></i></span>
+                        </li>
+                    </ul>
+                    <div class="pagination">
+                    	<ul>
+                    		<li><a href="javascript:void(0)" aria-label="Previous" role="change-page">上一页</a></li>
+                    		<li><a href="javascript:void(0)" class="active">1</a></li>
+                    		<li><a href="javascript:void(0)">2</a></li>
+                    		<li><a href="javascript:void(0)">3</a></li>
+                    		<li><a href="javascript:void(0)">...</a></li>
+                    		<li><a href="javascript:void(0)">20</a></li>
+                    		<li><a  href="javascript:void(0)" aria-label="Next" role="change-page">下一页</a></li>
+                    	</ul>
+                    </div>
+                </section>
+            </section>           
+            <!-- 学习用品以及其他 -->
+
+            <!-- 侧边栏 -->
+            <aside>
+                <h3>物品分类</h3>
+                <ul>
+                    <li><a href="#commodity-name" role="aside" title="学习用品"><i class="images stationery-icon"></i>学习用品</a></li>
+                    <li><a href="#commodity-name" role="aside" title="衣服配饰"><i class="images clothes-icon"></i>衣服配饰</a></li>
+                    <li><a href="#commodity-name" role="aside" title="数码产品"><i class="images digital-icon"></i>数码产品</a></li>
+                    <li><a href="#commodity-name" role="aside" title="交通工具"><i class="images transpotation-icon"></i>交通工具</a></li>
+                    <li><a href="#commodity-name" role="aside" title="生活娱乐"><i class="images entertainment-icon"></i>生活娱乐</a></li>
+                    <li><a href="#commodity-name" role="aside" title="其他"><i class="images others-icon"></i>其他</a></li>
+                </ul>
+            </aside>
+            <!-- 侧边栏 -->
+        </article>
+     <!-- 链接栏 -->
+        <div class="footer-link">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- 链接栏 -->
+    </div>
+    <!-- footer -->
+        <footer>
+        </footer>
+        <!-- footer -->
+        <!-- 登录模态窗 -->
+        <div class="login-modal" id="login">
+			<h3>LOG IN</h3>			
+			<ul>
+			<form action="#" method="post">
+				<li><input type="text" role="email" placeholder="邮 箱"></li>
+				<span></span>
+				<li><input type="password" role="passowrd" placeholder="密 码"></li>
+				<span></span>
+				<li><button type="submit">登 录</button></li>
+				<li><a href="#" id="for-signin">点击注册</a><span><a href="#">忘记密码？</a></span></li>
+			</form>
+			</ul>
+		</div>
+        <!-- 登录模态窗 -->
+        <!-- 注册模态窗 -->
+        <div class="signin-modal" id="signin">
+			<h3>SIGN IN</h3>
+			<span class="simplemodal-close">关闭</span>
+			<ul>
+			<form action="#123" method="post">			
+				<li role="input"><input type="text" role="nickname" name="nickname" placeholder="昵 称"></li>
+				<span></span>
+				<li role="input"><input type="text" role="email" name="email" placeholder="邮 箱"></li>
+				<span></span>
+				<li role="input"><input type="password" role="password" name="password" placeholder="密 码"></li>
+				<span></span>
+				<li role="input"><input type="password" role="confirm" name="confirm" placeholder="确 认 密 码"></li>
+				<span></span>
+				<li><button type="submit">注 册</button></li>
+				<li><a href="#" id="for-login">点击登录</a></li>
+			</form>
+			</ul>
+		</div>
+        <!-- 注册模态窗 -->
+        <script type="text/javascript">
+       
+        </script>
+</body>
+
+</html>
