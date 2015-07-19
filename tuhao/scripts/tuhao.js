@@ -100,10 +100,8 @@
             // 给pagination添加样式变化事件                 
             $(".pagination a").not("[role='change-page']").on("click",function(){
                 var $target = $(this);
-                    console.log($target);  
                     if(!$target.hasClass("active")){
-                        $target.addClass("active");
-                        console.log($target.parent());
+                        $target.addClass("active");                        
                         $target.parent().siblings().children("a").removeClass("active");                        
                     }     
             });
@@ -290,7 +288,7 @@
                              }
                              signment=true;
                         }
-                })                           
+                })                         
                 if(signment){
                         $prompt.text("");                        
                         globalPrompt = true;
