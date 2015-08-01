@@ -1,0 +1,953 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.logo-sprite, .logo-down-arrow, .logo-large-down-arrow, .logo-large-up-arrow, .logo-left-arrow, .logo-right-arrow, .logo-search, .logo-self-info {
+  background-image: url('../images/logo-sa90200262c.png');
+  background-repeat: no-repeat;
+}
+
+.logo-down-arrow {
+  background-position: 0 0;
+  height: 8px;
+  width: 12px;
+}
+
+.logo-large-down-arrow {
+  background-position: 0 -16px;
+  height: 14px;
+  width: 22px;
+}
+
+.logo-large-up-arrow {
+  background-position: 0 -38px;
+  height: 14px;
+  width: 22px;
+}
+
+.logo-left-arrow {
+  background-position: 0 -60px;
+  height: 12px;
+  width: 8px;
+}
+
+.logo-right-arrow {
+  background-position: 0 -80px;
+  height: 12px;
+  width: 8px;
+}
+
+.logo-search {
+  background-position: 0 -100px;
+  height: 22px;
+  width: 19px;
+}
+
+.logo-self-info {
+  background-position: 0 -130px;
+  height: 15px;
+  width: 16px;
+}
+
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*
+*/
+/*
+* Clearfix
+*
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+* bypass text
+*/
+/*
+* Animation
+*
+*/
+/*
+* Alerted
+*
+*/
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+* 
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+/* set the min-width*/
+body {
+  font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+}
+
+/* remove the default style of tag-a */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.item1, .item2, .item3 {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.articel-active {
+  display: block;
+}
+
+/* self-info include myrelease & mysending & personal infomation */
+.self-info {
+  background: url(../images/self-bg.jpg) repeat-x;
+  height: 47px;
+}
+.self-info .item1 {
+  display: flex;
+  justify-content: flex-end;
+  /* register and signin-btn */
+  /* register and signin-btn */
+}
+.self-info .item1 li {
+  display: inline-block;
+  color: #fff;
+  height: 47px;
+  line-height: 47px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+.self-info .item1 li:last-child {
+  margin-right: -40px;
+}
+.self-info .item1 .logo-self-info {
+  padding: 5px;
+  background-color: #ffd200;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: content-box;
+  border-radius: 3px;
+  cursor: pointer;
+  /* 提示符 */
+  /*@include hui_tooltip(attr(data-tooltip),bottom);*/
+}
+
+/* !self-info */
+/* banner  include search-input*/
+.banner {
+  height: 65px;
+}
+.banner .item2 {
+  /* iSend icon */
+  position: relative;
+}
+.banner .item2 .logo {
+  position: absolute;
+  top: -47px;
+  background-color: #ffd200;
+  width: 159px;
+  height: 96px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px;
+  cursor: default;
+}
+.banner .item2 .search {
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
+  align-items: center;
+  /* seach-input */
+  /* search-input */
+}
+.banner .item2 .search input {
+  height: 30px;
+  width: 214px;
+  border: 1px solid #ffd200;
+  box-sizing: border-box;
+  padding-left: 8px;
+  resize: none;
+  font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+  font-size: 17px;
+  color: #4e4e4e;
+}
+.banner .item2 .search input:focus {
+  outline: none;
+}
+.banner .item2 .search i {
+  background-origin: content-box;
+  padding: 4px;
+  background-color: #ffd200;
+  cursor: pointer;
+}
+.banner .item2 h1 {
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.banner .item2 span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  line-height: 2em;
+}
+
+/* !banner */
+.doodle {
+  height: 435px;
+  background-color: #ffd200;
+  position: relative;
+}
+.doodle nav {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  color: #212121;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.doodle nav:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.doodle nav:hover .nav-lists > li > a {
+  color: #fff;
+}
+.doodle nav .nav-lists {
+  position: relative;
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+}
+.doodle nav .nav-lists > li {
+  flex: 1;
+  text-align: center;
+  font-size: 17px;
+  height: 46px;
+  line-height: 46px;
+  margin-right: -2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.doodle nav .nav-lists > li:hover a {
+  color: #ffd200;
+}
+.doodle nav .nav-lists article {
+  position: absolute;
+  width: 100%;
+  top: 39px;
+  left: 0;
+  border-top: 4px solid #000;
+  background-color: #fff;
+  display: none;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.doodle nav .nav-lists article .progress-bar {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  top: -4px;
+  left: 0;
+  float: left;
+  background-color: #ffd200;
+}
+.doodle nav .nav-lists article .aside-nav {
+  display: inline-block;
+  width: 184px;
+  float: left;
+  margin-right: -3px;
+}
+.doodle nav .nav-lists article .aside-nav a {
+  color: #212121;
+}
+.doodle nav .nav-lists article .aside-nav li {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  text-align: left;
+  padding-left: 30px;
+}
+.doodle nav .nav-lists article .aside-nav li:hover {
+  background-color: #d7d7d7;
+}
+.doodle nav .nav-lists article .nav-content {
+  display: flex;
+  height: 100%;
+}
+.doodle nav .nav-lists article .nav-content div {
+  flex: 1;
+  margin-left: 1px;
+}
+.doodle nav .nav-lists article .nav-content div .thumbnail {
+  height: 175px;
+  width: 251px;
+  overflow: hidden;
+}
+.doodle nav .nav-lists article .nav-content div img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.doodle nav .nav-lists article .nav-content div img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.doodle nav .nav-lists article .nav-content div h3 {
+  font-size: 18px;
+  color: #212121;
+  line-height: 2em;
+}
+.doodle nav .nav-lists article .nav-content div p {
+  font-size: 15px;
+  color: #656565;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+.doodle .nav-fixed-top {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+}
+.doodle .nav-fixed-top .nav-lists > li > a {
+  color: #fff;
+}
+.doodle .nav-fixed-top:hover {
+  background-color: #000;
+}
+.doodle .nav-fixed-top:hover .nav-lists > li > a {
+  color: #fff;
+}
+.doodle .carsouel {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  cursor: default;
+  overflow: hidden;
+}
+.doodle .carsouel .container {
+  position: relative;
+  left: -1200px;
+  width: 700%;
+  height: 100%;
+}
+.doodle .carsouel .container img {
+  float: left;
+  width: 1200px;
+  height: 100%;
+}
+.doodle .carsouel .carsouel-buttons {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 109px;
+  bottom: 20px;
+}
+.doodle .carsouel .carsouel-buttons .on {
+  background-color: #fff;
+}
+.doodle .carsouel .carsouel-buttons span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 9px;
+}
+
+/* recommend contain commodities */
+.recommend {
+  max-width: 970px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.recommend p:first-child {
+  font-size: 22px;
+  line-height: 2.5em;
+  color: #212121;
+  border-bottom: 2px solid #e2e2e2;
+}
+.recommend i {
+  display: inline-block;
+  background-origin: content-box;
+  padding: 8px;
+  border: 1px solid #e1e1e1;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.recommend i:hover {
+  background-color: #a0a0a0;
+}
+.recommend .logo-left-arrow {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.recommend .logo-right-arrow {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.recommend ul {
+  margin-top: 12px;
+  display: flex;
+  width: 2924px;
+  position: relative;
+  left: 0px;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.recommend li {
+  flex: 1;
+  text-align: center;
+}
+.recommend li:hover h3 {
+  color: #ffd200;
+}
+.recommend li:nth-child(2n):hover h3 {
+  color: #692d31;
+}
+.recommend li + li {
+  margin-left: 7px;
+}
+.recommend .thumbnail {
+  height: 226px;
+  width: 321px;
+  overflow: hidden;
+}
+.recommend img {
+  height: 226px;
+  width: 321px;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.recommend img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.recommend h3 {
+  font-size: 15px;
+  line-height: 2em;
+  font-weight: bold;
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+.recommend p {
+  font-size: 17px;
+  line-height: 1.5em;
+  color: #212121;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.recommend span {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #656565;
+}
+
+.divided {
+  height: 53px;
+  background-color: #ffd200;
+}
+
+.content {
+  max-width: 970px;
+  margin: 0 auto;
+  display: flex;
+}
+.content .right {
+  border-top: 2px solid #d7d7d7;
+  text-align: center;
+  margin-top: 10px;
+  width: 251px;
+}
+.content .right h1 {
+  font-size: 22px;
+  color: #212121;
+  line-height: 3em;
+}
+.content .right .chart {
+  border: 2px solid #d7d7d7;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 14px 0 14px;
+  width: 100%;
+}
+.content .right .chart .title {
+  position: absolute;
+  width: 125px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #212121;
+  line-height: 1.5em;
+  top: -16px;
+  background-color: #fff;
+}
+.content .right .chart .title span {
+  font-size: 25px;
+  color: #d7d7d7;
+}
+.content .right .chart .title a {
+  margin: 0 3px;
+}
+.content .right .chart .title a.chart-active {
+  font-weight: bold;
+}
+.content .right .chart .title a:focus {
+  font-weight: bold;
+}
+.content .right .chart .first-title {
+  position: relative;
+  height: 145px;
+  width: 217px;
+}
+.content .right .chart .first-title img {
+  width: 100%;
+  height: 100%;
+}
+.content .right .chart .first-title .sticky {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 27px;
+  height: 27px;
+  font-size: 15px;
+  line-height: 27px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: default;
+}
+.content .right .chart .first-title span:first-child {
+  align-self: flex-start;
+}
+.content .right .chart .first-title span:last-child {
+  align-self: flex-end;
+}
+.content .right .chart .first-title::before {
+  content: attr(data-title);
+  position: absolute;
+  left: 12px;
+  margin-top: -18.5px;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  border-radius: 37px;
+  color: #fff;
+  background-color: #000;
+  box-shadow: 0 0 3px #000;
+}
+.content .right .chart .lists {
+  height: 531px;
+  padding-top: 19px;
+  overflow: hidden;
+}
+.content .right .chart .lists ul {
+  position: relative;
+  top: 0px;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.content .right .chart .lists li {
+  width: 217px;
+  height: 70px;
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+}
+.content .right .chart .lists li img {
+  height: 100%;
+  width: 96px;
+}
+.content .right .chart .lists li::before {
+  content: attr(data-title);
+  position: absolute;
+  left: 12px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #000;
+  box-shadow: 0 0 3px 3px #d7d7d7;
+}
+.content .right .chart .lists li .detail {
+  flex: 1;
+}
+.content .right .chart .lists li .detail span {
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 1.5em;
+}
+.content .right .chart .lists li .detail span:nth-child(1) {
+  color: #646464;
+  font-size: 13px;
+}
+.content .right .chart .lists li .detail span:nth-child(2), .content .right .chart .lists li .detail span:nth-child(3) {
+  font-size: 13px;
+  color: #212121;
+  font-weight: bold;
+}
+.content .right .chart .lists li .detail span:last-child {
+  color: #656565;
+  font-size: 11px;
+}
+.content .right .chart .change-lists {
+  display: flex;
+  height: 27px;
+  position: relative;
+  left: -16px;
+  width: 251px;
+}
+.content .right .chart .change-lists a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #d7d7d7;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.content .right .chart .change-lists a:first-child {
+  border-right: 1px solid #d7d7d7;
+}
+.content .right .chart .change-lists a:hover {
+  background-color: #d7d7d7;
+}
+.content .right .chart .logo-large-down-arrow, .content .right .chart .logo-large-up-arrow {
+  display: inline-block;
+}
+.content .left {
+  width: 713px;
+  margin-right: 9px;
+  position: relative;
+  top: -25px;
+  /* about-more's description */
+}
+.content .left .head-img {
+  height: 383px;
+  width: 709px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.content .left .head-img img {
+  height: 100%;
+  width: 100%;
+}
+.content .left li {
+  display: inline-block;
+  position: relative;
+}
+.content .left li:nth-child(2n) {
+  margin-left: 5px;
+}
+.content .left .thumbnail {
+  width: 350px;
+  height: 224px;
+  overflow: hidden;
+}
+.content .left .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.content .left img {
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.content .left img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.content .left .sticky-note {
+  width: 300px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  cursor: default;
+}
+.content .left .sticky-note:hover {
+  box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.2);
+}
+.content .left .sticky-note a {
+  width: 135px;
+  height: 35px;
+  display: inline-block;
+  background-color: #f6bd4e;
+  color: #212121;
+  font-size: 17px;
+  line-height: 35px;
+  position: relative;
+  cursor: pointer;
+  top: -10px;
+}
+.content .left .sticky-note p {
+  font-size: 17px;
+  color: #212121;
+  line-height: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.content .left .sticky-note span {
+  font-size: 17px;
+  color: #656565;
+  line-height: 1.5em;
+}
+
+.getall {
+  margin: 0 auto;
+  height: 52px;
+  line-height: 52px;
+  width: 732px;
+  background-color: #282828;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 45px;
+  height: 180px;
+  background-color: #282828;
+}
+
+/* 登录注册框  */
+.modal-title {
+  position: absolute;
+  top: -20px;
+  display: flex;
+  width: 100%;
+}
+.modal-title span {
+  border-top: 1px solid #B6B2B2;
+  flex: 1;
+  display: inline-block;
+  align-self: center;
+}
+
+.login-modal, .signin-modal, .info-modal {
+  width: 392px;
+  border: 1px solid #B6B2B2;
+  border-top: 0px;
+  display: none;
+  position: relative;
+}
+
+.for-login, .for-signin {
+  height: 40px;
+  text-align: center;
+  border-top: 1px solid #B6B2B2;
+}
+.for-login a, .for-signin a {
+  line-height: 40px;
+  height: 40px;
+  color: #ffd200;
+  text-decoration: underline;
+}
+
+.login-modal h3, .signin-modal h3, .info-modal h3 {
+  font-size: 27px;
+  line-height: 1.5em;
+  color: #edebee;
+  width: 168px;
+  flex: 1.5;
+  text-align: center;
+}
+
+.login-modal ul, .signin-modal ul, .info-modal ul {
+  padding: 41px 41px 0;
+}
+.login-modal ul p, .signin-modal ul p, .info-modal ul p {
+  line-height: 20px;
+  margin: 10px 0;
+  color: #edebee;
+}
+.login-modal ul p .aggrement, .signin-modal ul p .aggrement, .info-modal ul p .aggrement {
+  color: blue;
+  text-decoration: underline;
+}
+.login-modal ul p .forgetps-btn, .signin-modal ul p .forgetps-btn, .info-modal ul p .forgetps-btn {
+  float: right;
+  color: #edebee;
+}
+
+.login-modal > ul li, .signin-modal > ul li, .info-modal > ul li {
+  width: 310px;
+  height: 52px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 61px;
+  position: relative;
+}
+
+.login-modal li input, .login-modal li button, .signin-modal li input, .signin-modal li button, .info-modal li input, .info-modal li button {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #edebee;
+  border: 0px;
+  outline: none;
+  color: #212121;
+}
+
+/*取消的默认样式*/
+.signin-modal > ul li[role="input"] {
+  margin-bottom: 3px;
+}
+
+.login-modal > ul li[role="input"] {
+  margin-bottom: 4px;
+}
+
+.info-modal > ul li[role="input"] {
+  margin-bottom: 4px;
+}
+
+/*取消的默认样式*/
+.login-modal li button, .signin-modal li button, .info-modal li button {
+  background-color: #ffd200;
+  font-size: 26px;
+  color: #070707;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*提示框*/
+.login-modal > ul span, .signin-modal > ul span, .info-modal > ul span {
+  line-height: 14px;
+  font-size: 14px;
+  color: #ffd200;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/*登录框*/
